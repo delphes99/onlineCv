@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CV\n"
+"POT-Creation-Date: 2015-02-14 18:20+0100\n"
+"PO-Revision-Date: 2015-02-14 18:25+0100\n"
+"Last-Translator: \n"
+"Language-Team: Laurent\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: D:\\Dev\\olcv_material\n"
+
+#: D:\Dev\olcv_material/index.php:13
+msgid "headTitle"
+msgstr "Laurent Gautho-lapeyre : CV en ligne"
+
+#: D:\Dev\olcv_material/index.php:33
+msgid "prenom"
+msgstr "Laurent"
+
+#: D:\Dev\olcv_material/index.php:33
+msgid "nom"
+msgstr "GAUTHO-LAPEYRE"
+
+#: D:\Dev\olcv_material/index.php:34
+msgid "titrePoste"
+msgstr "Ingénieur logiciel"
+
+#: D:\Dev\olcv_material/index.php:40 D:\Dev\olcv_material/index.php:96
+msgid "skillsTitle"
+msgstr "Compétences"
+
+#: D:\Dev\olcv_material/index.php:41 D:\Dev\olcv_material/index.php:117
+msgid "experienceTitle"
+msgstr "Expériences"
+
+#: D:\Dev\olcv_material/index.php:42 D:\Dev\olcv_material/index.php:192
+msgid "formationTitle"
+msgstr "Formation"
+
+#: D:\Dev\olcv_material/index.php:43 D:\Dev\olcv_material/index.php:221
+msgid "otherTitle"
+msgstr "Divers"
+
+#: D:\Dev\olcv_material/index.php:47
+msgid "Filtres"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:48
+msgid "Activer les filtres"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:53
+msgid "Supprimer tous les filtres"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:57
+msgid "Exception"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:72
+msgid "ageLabel"
+msgstr "Age"
+
+#: D:\Dev\olcv_material/index.php:77
+msgid "mailLabel"
+msgstr "Mail"
+
+#: D:\Dev\olcv_material/index.php:78
+msgid "mail"
+msgstr "cv [at] laurent-gautho-lapeyre.fr"
+
+#: D:\Dev\olcv_material/index.php:81
+msgid "ville"
+msgstr "Ville"
+
+#: D:\Dev\olcv_material/index.php:87
+msgid "pdfFormatLabel"
+msgstr "Téléchargez une version PDF de mon CV"
+
+#: D:\Dev\olcv_material/index.php:91
+msgid "generalDescription"
+msgstr ""
+"Passionné d'informatique et de technologie en général, je décide de suivre "
+"une formation dans cette filière, jusqu'à obtenir un diplôme d'Ingénieur en "
+"Informatique. Je travaille depuis en tant qu'ingénieur d'étude et me suis "
+"forgé une solide expérience au travers de mes diverses missions.Ce site est "
+"un CV interactif détaillant mes expériences professionnelles. Bien qu'étant "
+"orienté vers les nouvelles technologies (J2EE / .Net), ce Curriculum vitae "
+"se veut exhaustif, comprenant l'ensemble des missions que j'ai effectuées et "
+"des projets auxquels j'ai participés."
+
+#: D:\Dev\olcv_material/index.php:141
+msgid "month"
+msgstr "mois"
+
+#: D:\Dev\olcv_material/index.php:165
+msgid "viewDetail"
+msgstr "Voir la description détaillée"
+
+#: D:\Dev\olcv_material/index.php:195
+msgid "formationSubtitle"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:208
+msgid "educationSubtitle"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:224
+msgid "languageSubtitle"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:241
+msgid "toTop"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:267
+msgid "viadeoIco"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:268
+msgid "linkedinIco"
+msgstr ""
+
+#: D:\Dev\olcv_material/index.php:269
+msgid "pdfIco"
+msgstr ""
+
+#~ msgid "socialLabel"
+#~ msgstr "Social"
+
+#~ msgid "age"
+#~ msgstr "Age"
+
+#~ msgid "social"
+#~ msgstr "Social"
+
+#~ msgid "pdfFormat"
+#~ msgstr "CV au format PDF"
+
+#~ msgid "Age"
+#~ msgstr "Age"
