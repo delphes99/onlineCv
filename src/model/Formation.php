@@ -1,5 +1,5 @@
 <?php
-class Model_Formation {
+class Formation {
    /**
     * Table formation
     * @var int

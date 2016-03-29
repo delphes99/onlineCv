@@ -1,0 +1,119 @@
+body {
+	background-color: #fefefe;
+}
+
+h4 {
+	color: #004d40;
+}
+
+#menu_bar {
+	background-color: #00695c;
+	color: #ffffff;
+	box-shadow: 0px 4px 2px #555555;
+}
+
+#nav_filters {
+	background-color: #b2dfdb;
+}
+
+#navigation {
+	background: #ffffff;
+	box-shadow: -5px 1px 12px #333333;
+}
+
+#navigation h4 {
+	margin-right: 5px;
+	color: #00695c;
+	font-size: 15px;
+	text-align: right;
+}
+
+#nav_content ul li a,
+#nav_content ul li a:visited,
+#nav_content ul li a:active {
+	background-color: #e0f2f1;
+	color: #000000;
+}
+
+#nav_content ul li a:hover {
+	background-color: #4db6ac;
+	color: #ffffff;
+}
+
+.header_item div a:hover {
+	color: #ffffff;
+}
+
+.header_item label {
+	color: #004d40;
+}
+
+.ico {
+	background-color: #00695c;
+}
+
+.ico:hover {	
+	background-color: #009688;
+}
+
+#main_content h2 {
+	color: #004d40;
+}
+
+.main_content_item {
+	background: #ffffff;
+}
+
+.main_content_item_title,
+.experienceDetails h1 {
+	color: #eeeeee;
+	background: #00897b;
+}
+
+#main_content .main_content_item_title h3 {
+	color: #ffffff;
+}
+
+.main_content_item_function {
+	color: #7489a8;
+}
+
+.main_content_item_informations {
+	background-color: #e0f2f1;
+}
+.button {
+	background-color: #ffc107;
+}
+
+.skill {
+	color: #ffffff;
+	background-color: #80cbc4;
+}
+
+.skill:hover {
+	background-color: #00796b;
+}
+
+.important_skill {
+	background-color: #4db6ac;
+}
+
+.main_content_item_content .table_skill td  {
+	border-color: #b2dfdb;
+}
+
+a.techSelected,
+a.techSelected:hover {
+	background-color: #00cc00;
+}
+
+.mission_detail label {
+	color: #004d40;
+}
+.main_content_item_content th {
+	color: #00897b;
+}
+
+.goals li {
+	border-color: #b2dfdb;
+}

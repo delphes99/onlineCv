@@ -1,0 +1,181 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CV\n"
+"POT-Creation-Date: 2015-11-09 17:22+0100\n"
+"PO-Revision-Date: 2015-11-09 11:45+0100\n"
+"Last-Translator: \n"
+"Language-Team: Laurent\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: index.php\n"
+
+#: index.php:10
+msgid "headTitle"
+msgstr ""
+
+#: index.php:26
+msgid "prenom"
+msgstr ""
+
+#: index.php:26
+msgid "nom"
+msgstr ""
+
+#: index.php:27
+msgid "titrePoste"
+msgstr ""
+
+#: index.php:32 index.php:346
+msgid "activateFilter"
+msgstr ""
+
+#: index.php:43 index.php:101
+msgid "skillsTitle"
+msgstr ""
+
+#: index.php:44 index.php:122
+msgid "experienceTitle"
+msgstr ""
+
+#: index.php:45 index.php:259
+msgid "personalExperienceTitle"
+msgstr ""
+
+#: index.php:46 index.php:285
+msgid "formationTitle"
+msgstr ""
+
+#: index.php:47 index.php:314
+msgid "otherTitle"
+msgstr ""
+
+#: index.php:51
+msgid "lang"
+msgstr ""
+
+#: index.php:53
+msgid "langFr"
+msgstr ""
+
+#: index.php:54
+msgid "langEn"
+msgstr ""
+
+#: index.php:58 index.php:66
+msgid "style"
+msgstr ""
+
+#: index.php:68
+msgid "archives"
+msgstr ""
+
+#: index.php:76
+msgid "ageLabel"
+msgstr ""
+
+#: index.php:81
+msgid "mailLabel"
+msgstr ""
+
+#: index.php:82
+msgid "mail"
+msgstr ""
+
+#: index.php:85
+msgid "ville"
+msgstr ""
+
+#: index.php:89 index.php:367
+msgid "viadeoIco"
+msgstr ""
+
+#: index.php:90 index.php:368
+msgid "linkedinIco"
+msgstr ""
+
+#: index.php:91 index.php:370
+msgid "twitterIco"
+msgstr ""
+
+#: index.php:92 index.php:369
+msgid "pdfIco"
+msgstr ""
+
+#: index.php:96
+msgid "generalDescription"
+msgstr ""
+
+#: index.php:127 index.php:264
+msgid "month"
+msgstr ""
+
+#: index.php:185
+msgid "viewDetail"
+msgstr ""
+
+#: index.php:191
+msgid "jobClient"
+msgstr ""
+
+#: index.php:202
+msgid "jobEmployer"
+msgstr ""
+
+#: index.php:213
+msgid "jobType"
+msgstr ""
+
+#: index.php:219
+msgid "jobPlace"
+msgstr ""
+
+#: index.php:225
+msgid "jobStatus"
+msgstr ""
+
+#: index.php:288
+msgid "formationSubtitle"
+msgstr ""
+
+#: index.php:301
+msgid "educationSubtitle"
+msgstr ""
+
+#: index.php:317
+msgid "languageSubtitle"
+msgstr ""
+
+#: index.php:334
+msgid "toTop"
+msgstr ""
+
+#: index.php:343
+msgid "disclaimer"
+msgstr ""
+
+#: index.php:347
+msgid "desactivateFilter"
+msgstr ""
+
+#~ msgid "socialLabel"
+#~ msgstr "Social"
+
+#~ msgid "age"
+#~ msgstr "Age"
+
+#~ msgid "social"
+#~ msgstr "Social"
+
+#~ msgid "pdfFormat"
+#~ msgstr "CV au format PDF"
+
+#~ msgid "Age"
+#~ msgstr "Age"

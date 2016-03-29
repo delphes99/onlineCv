@@ -1,0 +1,191 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CV\n"
+"POT-Creation-Date: 2015-11-09 17:22+0100\n"
+"PO-Revision-Date: 2015-11-09 17:23+0100\n"
+"Last-Translator: \n"
+"Language-Team: Laurent\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: index.php\n"
+
+#: index.php:10
+msgid "headTitle"
+msgstr "Laurent Gautho-lapeyre : CV en ligne"
+
+#: index.php:26
+msgid "prenom"
+msgstr "Laurent"
+
+#: index.php:26
+msgid "nom"
+msgstr "GAUTHO-LAPEYRE"
+
+#: index.php:27
+msgid "titrePoste"
+msgstr "Ingénieur logiciel"
+
+#: index.php:32 index.php:346
+msgid "activateFilter"
+msgstr "Activer les filtres"
+
+#: index.php:43 index.php:101
+msgid "skillsTitle"
+msgstr "Compétences"
+
+#: index.php:44 index.php:122
+msgid "experienceTitle"
+msgstr "Expériences"
+
+#: index.php:45 index.php:259
+msgid "personalExperienceTitle"
+msgstr "Expériences personnelles"
+
+#: index.php:46 index.php:285
+msgid "formationTitle"
+msgstr "Formation"
+
+#: index.php:47 index.php:314
+msgid "otherTitle"
+msgstr "Divers"
+
+#: index.php:51
+msgid "lang"
+msgstr "Langues"
+
+#: index.php:53
+msgid "langFr"
+msgstr "Français"
+
+#: index.php:54
+msgid "langEn"
+msgstr "English"
+
+#: index.php:58 index.php:66
+msgid "style"
+msgstr "Styles"
+
+#: index.php:68
+msgid "archives"
+msgstr "Archives"
+
+#: index.php:76
+msgid "ageLabel"
+msgstr "Age"
+
+#: index.php:81
+msgid "mailLabel"
+msgstr "Mail"
+
+#: index.php:82
+msgid "mail"
+msgstr "cv [at] laurent-gautho-lapeyre.fr"
+
+#: index.php:85
+msgid "ville"
+msgstr "Ville"
+
+#: index.php:89 index.php:367
+msgid "viadeoIco"
+msgstr "Viadeo"
+
+#: index.php:90 index.php:368
+msgid "linkedinIco"
+msgstr "LinkedIn"
+
+#: index.php:91 index.php:370
+msgid "twitterIco"
+msgstr "Twitter"
+
+#: index.php:92 index.php:369
+msgid "pdfIco"
+msgstr "Cv papier"
+
+#: index.php:96
+msgid "generalDescription"
+msgstr ""
+"Passionné d'informatique et de technologie en général, je décide de suivre "
+"une formation dans cette filière, jusqu'à obtenir un diplôme d'Ingénieur en "
+"Informatique. Je travaille depuis en tant qu'ingénieur d'étude et me suis "
+"forgé une solide expérience au travers de mes diverses missions.Ce site est "
+"un CV interactif détaillant mes expériences professionnelles. Bien qu'étant "
+"orienté vers les nouvelles technologies (J2EE / .Net), ce Curriculum vitae "
+"se veut exhaustif, comprenant l'ensemble des missions que j'ai effectuées et "
+"des projets auxquels j'ai participés."
+
+#: index.php:127 index.php:264
+msgid "month"
+msgstr "mois"
+
+#: index.php:185
+msgid "viewDetail"
+msgstr "Voir la description détaillée"
+
+#: index.php:191
+msgid "jobClient"
+msgstr "Client"
+
+#: index.php:202
+msgid "jobEmployer"
+msgstr "Employeur"
+
+#: index.php:213
+msgid "jobType"
+msgstr "Type"
+
+#: index.php:219
+msgid "jobPlace"
+msgstr "Lieu"
+
+#: index.php:225
+msgid "jobStatus"
+msgstr "Poste"
+
+#: index.php:288
+msgid "formationSubtitle"
+msgstr "Formations"
+
+#: index.php:301
+msgid "educationSubtitle"
+msgstr "Parcours universitaire"
+
+#: index.php:317
+msgid "languageSubtitle"
+msgstr "Langues"
+
+#: index.php:334
+msgid "toTop"
+msgstr "Vers le haut"
+
+#: index.php:343
+msgid "disclaimer"
+msgstr "Toute reproduction est interdite sans l'accord du webmaster."
+
+#: index.php:347
+msgid "desactivateFilter"
+msgstr "Désactiver les filtres"
+
+#~ msgid "socialLabel"
+#~ msgstr "Social"
+
+#~ msgid "age"
+#~ msgstr "Age"
+
+#~ msgid "social"
+#~ msgstr "Social"
+
+#~ msgid "pdfFormat"
+#~ msgstr "CV au format PDF"
+
+#~ msgid "Age"
+#~ msgstr "Age"
+
+#~ msgid "pdfFormatLabel"
+#~ msgstr "Téléchargez une version PDF de mon CV"

@@ -1,10 +1,12 @@
 <?php
-class Model_Skill {
+class Skill {
   private $id;
   private $name;
   private $description;
   private $skillType;
   private $important;
+  private $experiences;
+  private $personnalExperiences;
 
   /*
    * Constructor
@@ -15,6 +17,9 @@ class Model_Skill {
     $this->description = $description;
     $this->skillType = $skillType;
     $this->important = $important;
+	
+    $this->experiences = array();
+    $this->personnalExperiences = array();
   }
 
    /**
@@ -55,5 +60,61 @@ class Model_Skill {
     */
    public function isImportant() {
       return $this->important;
+   }
+   
+   /**
+    * Return all experiences attached
+    * @return Model_ExperienceSkill
+    */
+   public function getExperiences() {
+      return $this->experiences;
+   }
+
+   /**
+    * Add an experience
+    * @param Model_ExperienceSkill $experience
+    */
+   public function addExperience($experience) {
+      $this->experiences[] = $experience;
+   }
+   
+   /**
+    * Return the number of experiences
+    * @return int
+    */
+   public function countExperiences() {
+      return count($this->experiences);
+   }
+   
+   /**
+    * Return all personnal experiences attached
+    * @return Model_PersonnalExperienceSkill
+    */
+   public function getPersonnalExperiences() {
+      return $this->personnalExperiences;
+   }
+
+   /**
+    * Add an personnal experience
+    * @param Model_PersonnalExperienceSkill $experience
+    */
+   public function addPersonnalExperience($experience) {
+      $this->personnalExperiences[] = $experience;
+   }
+   
+   /**
+    * Return the number of personnal experiences
+    * @return int
+    */
+   public function countPersonnalExperiences() {
+      return count($this->personnalExperiences);
+   }
+   
+   /**
+    * Return the number of all experiences attached
+    * @return int
+    */
+   public function countAllExperiences() {
+      return $this->countExperiences() + $this->countPersonnalExperiences();
    }
 }

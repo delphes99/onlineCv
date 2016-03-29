@@ -1,5 +1,5 @@
 <?php
-class Model_SkillType {   
+class SkillType {   
   private $id;
   private $name;
   private $skills;

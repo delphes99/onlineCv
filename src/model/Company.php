@@ -1,16 +1,18 @@
 <?php
-class Model_Company {
+class Company {
   private $id;
   private $name;
   private $icon;
+  private $url;
 
   /*
    * Constructor
    */
-  public function __construct($id, $name, $icon) {
+  public function __construct($id, $name, $icon, $url) {
     $this->id = $id;
     $this->name = $name;
     $this->icon = $icon;
+    $this->url = $url;
   }
 
    /**
@@ -35,5 +37,13 @@ class Model_Company {
     */
    public function getIcon() {
       return $this->icon;
+   }
+   
+   /**
+    * Return the site url
+    * @return String
+    */
+   public function getUrl() {
+      return $this->url;
    }
 }

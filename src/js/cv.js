@@ -2,7 +2,7 @@
 var currentStyle;
 var filter;
 var activateFilter;
-var askActivateFilter;
+var filtersVisible;
 
 // Classes
 var ExperienceC = $.inherit(
@@ -30,21 +30,11 @@ var ExperienceC = $.inherit(
 		},
 		hide : function() {
 			var htmlElement = $('#experience_' + this.id).find('div.main_content_item_content');
-			var expander = $('#expander_experience_' + this.id);
 			htmlElement.fadeOut('slow');
-			expander.removeClass(this.classMin);
-			expander.addClass(this.classMax);
-			expander.empty();
-			expander.append('+');
 		},
 		show : function() {
 			var htmlElement = $('#experience_' + this.id).find('div.main_content_item_content');
-			var expander = $('#expander_experience_' + this.id);
 			htmlElement.fadeIn('slow');
-			expander.removeClass(this.classMax);
-			expander.addClass(this.classMin);
-			expander.empty();
-			expander.append('-');
 		},
 		toggle : function() {
 			var htmlElement = $('#experience_' + this.id).find('div.main_content_item_content');
@@ -57,17 +47,17 @@ var ExperienceC = $.inherit(
 		viewDetailExperience : function() {
 			var htmlElement = $('#experienceDetails_' + this.id);
 			htmlElement.bPopup({
-	                zIndex: 2
+	                zIndex: 200
 	            });
 		}
 	});
 	
 var SkillC = $.inherit(
 	{
-		__constructor : function(id, name, icon) {
+		__constructor : function(id, name, important) {
 			this.id = id;
 			this.name = name;
-			this.icon = icon;
+			this.important = important;
 		},
 		getId : function() {
 			return this.id;
@@ -75,8 +65,8 @@ var SkillC = $.inherit(
 		getName : function() {
 			return this.name;
 		},
-		getIcon : function() {
-			return this.icon;
+		isImportant : function() {
+			return this.important;
 		}
 	});
 	
@@ -84,16 +74,11 @@ var FilterManagerC = $.inherit(
 	{
 		__constructor : function() {
 			this.htmlElementFilter = $('#tabFilter');
-			this.htmlElementException = $('#tabException');
 			
 			this.tabSkill = new Array();
 			this.tabExperience = new Array();
 			this.tabExperienceVisible = new Array();
-			// Include
-			this.tabFilterIncExp = new Array();
 			this.tabFilterIncSkill = new Array();
-			// Exclude
-			this.tabFilterExcExp = new Array();
 		},
 		addSkill : function(skill) {
 			this.tabSkill[skill.getId()] = skill;
@@ -109,17 +94,10 @@ var FilterManagerC = $.inherit(
 			return this.tabExperience[id];
 		},
 		addFilterSkill : function(skill) {
-			$(".tech_" + skill.getId()).addClass('techSelected');
-			this.tabFilterIncSkill[skill.getId()] = skill;
-			this.applyFilters();
+			this.addFilterSkillById(skill.getId());
 		},
 		toggleFilterSkillById : function(id) {
-			if(askActivateFilter) {
-				fctActivateFilter(true);
-				displayNavigationBar();
-				askActivateFilter = false;
-			}
-			if(this.tabFilterIncSkill[id] != null) {
+			if($.inArray(id, this.tabFilterIncSkill) != -1) {
 				this.removeFilterSkillById(id);
 			} else {
 				this.addFilterSkillById(id);
@@ -127,12 +105,15 @@ var FilterManagerC = $.inherit(
 		},
 		addFilterSkillById : function(id) {
 			$(".tech_" + id).addClass('techSelected');
-			this.tabFilterIncSkill[id] = this.tabSkill[id];
+			this.tabFilterIncSkill.push(id);
 			this.applyFilters();
 		},
 		removeFilterSkillById : function(id) {
 			$(".tech_" + id).removeClass('techSelected');
-			delete this.tabFilterIncSkill[id];
+			var indexSkill = $.inArray(id, this.tabFilterIncSkill);
+			if(indexSkill != -1) {
+				this.tabFilterIncSkill.splice(indexSkill, 1);
+			}
 			this.applyFilters();
 		},
 		removeAllFilterSkill : function() {
@@ -140,94 +121,54 @@ var FilterManagerC = $.inherit(
 			this.tabFilterIncSkill = new Array();
 			this.applyFilters();
 		},
-		addFilterExperience : function(exp, include) {
-			if(include) {
-				this.tabFilterIncExp[exp.getId()] = exp;
-			} else {
-				this.tabFilterExcExp[exp.getId()] = exp;
-			}
-			this.applyFilters();
-		},
-		addFilterExperienceById : function(id, include) {
-			if(include) {
-				this.tabFilterIncExp[id] = this.tabExperience[id];
-			} else {
-				this.tabFilterExcExp[id] = this.tabExperience[id];
-			}
-			this.applyFilters();
-		},
-		removeFilterExperienceById : function(id, include) {
-			if(include) {
-				delete this.tabFilterIncExp[id];
-			} else {
-				delete this.tabFilterExcExp[id];
-			}
-			this.applyFilters();
-		},
-		removeAllFilterExperience : function() {
-			this.tabFilterIncExp = new Array();
-			this.tabFilterExcExp = new Array();
-			this.applyFilters();
-		},
-		toggleExperience : function(id) {
-			if(this.tabExperienceVisible[id] != null) {
-				this.tabFilterExcExp[id] = this.tabExperience[id];
-				this.tabExperience[id].hide();
-				delete this.tabFilterIncExp[id];
-				delete this.tabExperienceVisible[id];
-			} else {
-				this.tabExperienceVisible[id] = this.tabExperience[id];
-				this.tabFilterIncExp[id] = this.tabExperience[id];
-				this.tabExperience[id].show();
-				delete this.tabFilterExcExp[id];
-			}
-			this.applyFilters();
-		},
 		applyFilters : function() {
 			this.tabExperienceVisible = new Array();
 			var expListCopy = this.tabExperience.slice(0);
 			var exceptionNumber = 0;
-			// Exclude
-			for(expId in this.tabFilterExcExp) {
-				if(expListCopy[expId] != null) {
-					expListCopy[expId].hide();
-					delete expListCopy[expId];
-					exceptionNumber++;
+			var countFilters = 0;
+			
+			for(skillId in this.tabFilterIncSkill) {
+				if(skillId != null) {
+					countFilters++;
 				}
 			}
 			
-			// Include
-			for(expId in this.tabFilterIncExp) {
-				if(expListCopy[expId] != null) {
-					this.tabExperienceVisible[expId] = expListCopy[expId];
-					expListCopy[expId].show();
-					delete expListCopy[expId];
-					exceptionNumber++;
-					break;
+			if(countFilters > 0) {
+				// Show filters bar
+				if(!filtersVisible) {
+					$('#nav_filters').show();
+					filtersVisible = true;
+					
+					if(activateFilter) {
+						$('#activateFilter').prop('value', txtDesactivateFilter);
+					} else {
+						$('#activateFilter').prop('value', txtActivateFilter);
+					}
+				}
+			} else {
+				// Hide filters bar
+				if(filtersVisible) {
+					$('#nav_filters').hide();
+					filtersVisible = false;
 				}
 			}
 			
 			// Apply skills filters
 			var skillNumber = 0;
 			if(activateFilter) {
-				for(skillId in this.tabFilterIncSkill) {
+				for(var i = 0; i < this.tabFilterIncSkill.length; i++) {
+					var skillId = this.tabFilterIncSkill[i];
 					skillNumber++;
 					for(expCpId in expListCopy) {
 						var expCp = expListCopy[expCpId];
 						
 						if(expCp.getSkills()[skillId] != null) {
-							this.tabExperienceVisible[expCpId] = expListCopy[expCpId];
-							expListCopy[expCpId].show();
+							this.tabExperienceVisible[expCpId] = expCp;
 							delete expListCopy[expCpId];
+							expCp.show();
 						}
 					}
 				}
-			}
-			
-			if(exceptionNumber > 0) {
-				$('#listExceptions').show();
-			} else {
-				$('#listExceptions').hide();
 			}
 			
 			if(skillNumber > 0) {
@@ -235,50 +176,39 @@ var FilterManagerC = $.inherit(
 				for(expCpId in expListCopy) {
 					expListCopy[expCpId].hide();
 				}
-				$('#listFilters').show();
 			} else {
 				// Show all
 				for(expCpId in expListCopy) {
 					this.tabExperienceVisible[expCpId] = expListCopy[expCpId];
 					expListCopy[expCpId].show();
 				}
-				$('#listFilters').hide();
 			}
 			this.generateFiltersList();
 		},
 		generateFiltersList : function() {
 			var result = '';
 			// Generate filters list
-			for(skillId in this.tabFilterIncSkill) {
-				var skill = this.tabFilterIncSkill[skillId];
-				var typeSkillClass = '';
-				var typeSkillAlt = skill.getIcon();
-				result += '<tr class="filter">';
-				result += '<td><img class="delete" onclick="javascript:filter.removeFilterSkillById(\'' + skillId + '\');"></td>';
-				result += '<td><img alt="' + typeSkillAlt + '" class="' + typeSkillClass + '">' + skill.getName() + '</td>';
-				result += '</tr>';
+			for(var i = 0; i < this.tabFilterIncSkill.length; i++) {
+				var skillId = this.tabFilterIncSkill[i];
+				var skill = this.tabSkill[skillId];
+				result += '<a class="tech_';
+				result += skillId;
+				result += ' skill';
+				if(skill.isImportant()) {
+					result += ' important_skill';
+				}
+				result += ' techSelected" onclick="javascript:toggleFilterSkill('
+				result += skillId;
+				result += ');">'
+				result += skill.getName();
+				result += '</a>';
 			}
 			this.htmlElementFilter.html(result);
-			
-			result = '';
-			for(expId in this.tabFilterExcExp) {
-				var exp = this.tabFilterExcExp[expId];
-				result += '<tr class="filter">';
-				result += '<td><img class="delete" onclick="javascript:filter.removeFilterExperienceById(\'' + expId + '\', false);"></td>';
-				result += '<td><img alt="todo" class="filterHidden"></td>';
-				result += '<td>' + exp.getName() + '</td>';
-				result += '</tr>';
+			if($('#nav_filters').is(':visible')) {
+				$('#container').css('margin-top', ($('#menu_bar').height() + $('#nav_filters').height()) + 'px');
+			} else {
+				$('#container').css('margin-top', $('#menu_bar').height() + 'px');
 			}
-			
-			for(expId in this.tabFilterIncExp) {
-				var exp = this.tabFilterIncExp[expId];
-				result += '<tr class="filter">';
-				result += '<td><img class="delete" onclick="javascript:filter.removeFilterExperienceById(\'' + expId + '\', true);"></td>';
-				result += '<td><img alt="todo" class="filterVisible"></td>';
-				result += '<td>' + exp.getName() + '</td>';
-				result += '</tr>';
-			}
-			this.htmlElementException.html(result);
 		}
 	});
 
@@ -291,14 +221,7 @@ var FilterManagerC = $.inherit(
 function switchStyle(name) {
 	currentStyle = name;
 	// Main stylesheet
-	$('#switchCss').prop('href', baseUrl + '/css/style_' + name + '.css');
-}
-/**
- * Toggle the experience visibility
- * @param idExperience
- */
-function toggleExperience(idExperience) {
-	filter.toggleExperience(idExperience);
+	$('#switchCss').prop('href', 'css/style_' + name + '.css');
 }
 
 /**
@@ -378,26 +301,22 @@ function hideSkills(type) {
 	expander.removeClass('experience_minimize');
 }
 
-function fctActivateFilter(activate) {
-	$('#activateFilter').prop('checked', activate);
-	activateFilter = activate;
-	filter.applyFilters();
-}
-
 function toggleActivateFilter() {
 	// Click append before set checked properties
-	fctActivateFilter($('#activateFilter').is(':checked'));
+	activateFilter = !activateFilter;
+	
+	if(activateFilter) {
+		$('#activateFilter').prop('value', txtDesactivateFilter);
+	} else {
+		$('#activateFilter').prop('value', txtActivateFilter);
+	}
+	
+	filter.applyFilters();
 }
 
 // Navigation Bar management
 function toggleNavigationBar() {
 	$('#nav_content').toggle();
-	//$('#container').css('margin-left', $('#navigation').outerWidth(true));
-}
-
-function displayNavigationBar() {
-	$('#nav_content').show();
-	//$('#container').css('margin-left', $('#navigation').outerWidth(true));
 }
 
 // Tooltips
@@ -407,23 +326,40 @@ function addToolTips(id, text) {
 		fixed: false,
 		showEffect: 'none',
 		hideEffect: 'none',
-		offset: [10, 20]
+		offset: [10, 20],
+		position : {
+			my : 'left top',
+			at : 'right bottom',
+			viewport: $(window)
+		}
+	});
+}
+
+// Tooltips
+function addToolTipsCompany(id, text) {
+	$(id).qtip({ 
+		content: text,
+		fixed: false,
+		showEffect: 'none',
+		hideEffect: 'none',
+		position : {
+			my : 'right center',
+			at : 'left center',
+		}
 	});
 }
 
 //Start-up script
 $(document).ready(function() {
 	// Enable default stylesheet
-	switchStyle('white');
+	switchStyle('green');
 	
 	// Load manager
 	filter = new FilterManagerC();
 	loadFilter();
-	askActivateFilter = true;
-	fctActivateFilter(false);
+	filtersVisible = false;
+	activateFilter = true;
 	
-	$('#removeAllFilterSkill').click(removeAllFilterSkill);
-	$('#removeAllFilterExperience').click(removeAllFilterExperience);
 	$('#activateFilter').click(toggleActivateFilter);
 	$('#hamburger').click(toggleNavigationBar);
 	$('#nav_content').hide();

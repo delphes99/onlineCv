@@ -1,5 +1,5 @@
 <?php
-class Model_ExperienceGoal {
+class ExperienceGoal {
   private $id;
   private $description;
   private $skillType;

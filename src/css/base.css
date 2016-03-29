@@ -1,0 +1,384 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, sans-serif, Arial, Verdana;
+	font-size: 100%;
+}
+
+img {
+	margin: 0;
+	border: 0;
+}
+
+h4 {
+	margin: 0;
+	padding-left: 5px;
+	font-size: 12px;
+}
+
+#container {
+	margin-top: 60px;
+}
+
+#menu_bar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-width: 70em;
+	height: 60px;
+	line-height:60px;
+	white-space: nowrap;
+	z-index: 200;
+}
+
+#menu_bar #hamburger {
+	float: right;
+}
+
+#menu_bar h1, #menu_bar h2  {
+	display: inline;
+	margin-left: 20px;
+	padding-top: 25px;
+}
+
+#nav_filters {
+	position: fixed;
+	top: 60px;
+	width: 100%;
+}
+
+
+#listFilters {
+	display: inline-block;
+}
+
+#navigation {
+	position: fixed;
+	margin-bottom: 20px;
+	top: 60px;
+	right: 0;
+	height: 100%;
+}
+
+#nav_content {
+	width: 250px;
+	padding-top: 25px;
+}
+
+#nav_content ul {
+	margin: 0;
+	padding: 0;
+}
+
+#nav_content ul li {
+	list-style-type: none;
+}
+
+#nav_content ul li a,
+#nav_content ul li a:visited,
+#nav_content ul li a:active {
+	display: block;
+	padding: 5px;
+	margin-bottom: 2px;
+	width: 100%;
+	font-size: 20px;
+	text-decoration:none;
+	transition: background-color 0.5s;
+}
+
+#nav_content ul li a:hover {
+	padding-left: 15px;
+	transition: background-color 0.5s;
+}
+
+.selectColor {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+}
+
+#selectColor1 {
+	background-color: #009688;
+}
+
+#selectColor2 {
+	background-color:  #2196f3;
+}
+
+#selectColor3 {
+	background-color:  #607d8b;
+}
+
+#selectColor4 {
+	background-color:  #ffc107;
+}
+
+#selectColor5 {
+	background-color:  #e91e63;
+}
+
+/* Fix IE */
+html>body #navigation {
+	position: fixed;
+}
+
+#header {
+	padding-top: 5px;
+	width: 100%;
+}
+
+.header_item {
+	width: 20%;
+	min-width: 110px;
+	height: 50px;
+	line-height: 25px;
+	display: inline-block;
+	margin: 5px 0 0 5px;
+}
+
+.header_item div {
+	font-weight: bold;
+}
+
+.header_item div,
+.header_item label {
+	display: block;
+	height: 25px;
+}
+
+.ico {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+}
+
+.main_section {
+	margin-top: -50px;
+	padding-top: 60px;
+}
+
+#description {
+	padding: 10px;
+	font-size: 17px;
+}
+
+#main_content h2 {
+	margin: 0;
+	padding: 5px 10px;
+	font-size: 35px;
+	font-weight: bolder;
+}
+
+.main_content_item {
+	color: #111111;
+}
+
+.main_content_item_title {
+margin-bottom: 0;
+	width: 100%;
+	line-height: 25px;
+	vertical-align: middle;
+}
+
+#main_content .main_content_item_title h3 {
+	margin: 0;
+	padding-left: 10px;
+	display: inline-block;
+	font-size: 18px;
+}
+
+.main_content_item_title_period {
+margin-left: 15px;
+	display: inline-block;
+}
+
+.main_content_item_function {
+	float: left;
+	margin-left: 10px;
+}
+
+.main_content_item_title_footer {
+	clear: both;
+}
+.main_content_item_informations {
+	float: right;
+	padding: 4px;
+	width: 100px;
+	height: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.button {
+	display: inline-block;
+	line-height: 25px;
+	border: 0;
+}
+
+.skill {
+	display: inline-block;
+	line-height: 25px;
+	margin: 2px 2px 2px 0;
+	padding: 2px 10px;
+	transition: 1s;
+}
+
+.skill:hover {
+	transition: 1s;
+	padding: 2px 8px 2px 12px;
+}
+
+.main_content_item_content .table_skill {
+	width: 100%;
+	border-spacing: 10px;
+}
+
+
+.main_content_item_content .table_skill td {
+	padding-left: 5px;
+	border-left: 5px solid;
+}
+
+.main_content_item_content .table_skill th {
+	text-align: right;
+}
+
+.important_skill {
+	font-weight: bolder;
+	font-size: 13px;
+}
+
+.mission_detail div {
+	width: 1px;
+	font-weight: bold;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.mission_detail label {
+	font-size: 10px;
+}
+
+.experienceDetails .mission_detail div {
+	display: inline-block;
+}
+
+.experienceDetails .mission_detail div img {
+	margin-left: 25px;
+}
+
+.experienceDetails .mission_detail label {
+	display: inline-block;
+	width: 150px;
+}
+
+.mission_detail_footer {
+	clear: both;
+}
+
+.period {
+	float: left;
+}
+
+.main_content_item_content {
+	margin: 0;
+}
+
+.main_content_item_content th {
+	width: 100px;
+	text-align: left;
+	text-decoration: none;
+	font-weight: lighter;
+}
+
+.experience_description {
+	margin-top: 0;
+	padding-top: 15px;
+	font-weight: normal;
+	font-size: 15px;
+}
+
+.goals li {
+	margin-top: 7px;
+	padding-left: 5px;
+	border-left: 5px solid;
+	list-style-type: none;
+}
+
+.environnement div div {
+	border-top: 0;
+	margin: 0;
+}
+
+.main_content_item_footer {
+	padding-top: 5px;
+	clear: both;
+	width: 100%;
+}
+
+.show_experience {
+	font-size: 20px;
+	display: block;
+	margin: 5px auto;
+	width: 300px;
+	text-decoration: none;
+	white-space: nowrap;
+	text-align: center;
+}
+
+.experienceDetails {
+	display: none;
+	width: 95%;
+	background-color: #ffffff;
+}
+
+.experienceDetails h1 {
+	margin: 0;
+}
+
+.experienceDetailsContent {
+	padding: 5px;
+}
+
+#formation .instructor,
+#other .infos {
+	margin-bottom: 10px;
+	padding-left: 10px;
+	font-weight: normal;
+}
+
+#footer {
+	text-align: center;
+}
+
+#footer_nav {
+	padding: 5px 0;
+}
+
+#footer_nav a {
+	padding: 5px 0;
+	font-size: 11px;
+}
+
+#footer_content ul {
+	margin: 0;
+}
+
+#footer_content {
+}
+
+#footer_content_top {
+	height: 5px;
+}
+
+.footer_item {
+	list-style-type: none;
+	display: inline;
+	margin-left: 15px;
+	font-size: 9px;
+    font-weight: bold;
+}

@@ -1,5 +1,5 @@
 <?php
-class ExperienceSkill {
+class PersonnalExperienceSkill {
   private $skill;
   private $experience;
   private $version;

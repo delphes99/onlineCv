@@ -1,5 +1,5 @@
 <?php
-class Model_Experience {
+class Experience {
   private $id;
   private $title;
   private $status;
@@ -133,9 +133,6 @@ class Model_Experience {
     * @return number number of month
     */
    public function getDuration() {
-    //$endNumMonth = $this->getEnd()->y * 12 + $this->getEnd()->m;
-    //$startNumMonth = $this->getBeginning()->y * 12 + $this->getBeginning()->y;
-    //return ($endNumMonth - $startNumMonth + 1);
     $interval = $this->getBeginning()->diff($this->getEnd());
     return $interval->m + $interval->y * 12 + 1;
    }
@@ -177,10 +174,10 @@ class Model_Experience {
     * @param Model_MajorSkillType
     * @return Model_ExperienceSkill all skills of $typeSkill 
     */
-   private function getSkillByMajorTypeSkill($majorTypeSkill) {
+   public function getSkillByMajorTypeSkill($majorTypeSkill) {
     $skillsList = array();
     foreach ($this->skills as $skill) {
-      if($skill->getType()->getMajorType()->getId() == $majorTypeSkill->getId()) {
+      if($skill->getSkill()->getSkillType()->getMajorSkillType()->getId() == $majorTypeSkill->getId()) {
         $skillsList[] = $skill;
       }
     }
