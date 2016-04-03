@@ -17,5 +17,6 @@
 	$urlViadeo = getConfig()->get('user')->viadeo;
 	$urlLinkedIn = getConfig()->get('user')->linkedin;
 	$urlTwitter= getConfig()->get('user')->twitter;
+    $urlGithub = getConfig()->get('user')->github;
 	$urlCvPdf = getConfig()->get('user')->pdf_file;
 ?>

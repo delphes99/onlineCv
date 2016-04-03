@@ -1,167 +1,171 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: CV\n"
-"POT-Creation-Date: 2015-11-09 17:22+0100\n"
-"PO-Revision-Date: 2015-11-09 11:45+0100\n"
+"POT-Creation-Date: 2016-04-03 23:58+0100\n"
+"PO-Revision-Date: 2016-04-03 23:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: Laurent\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
-"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: ../\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: _;__;_e\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: index.php\n"
+"X-Poedit-SearchPath-1: ..\n"
 
-#: index.php:10
+#: ../olcv_material/index.php:11
 msgid "headTitle"
 msgstr ""
 
-#: index.php:26
+#: ../olcv_material/index.php:27
 msgid "prenom"
 msgstr ""
 
-#: index.php:26
+#: ../olcv_material/index.php:27
 msgid "nom"
 msgstr ""
 
-#: index.php:27
+#: ../olcv_material/index.php:28
 msgid "titrePoste"
 msgstr ""
 
-#: index.php:32 index.php:346
+#: ../olcv_material/index.php:33 ../olcv_material/index.php:348
 msgid "activateFilter"
 msgstr ""
 
-#: index.php:43 index.php:101
+#: ../olcv_material/index.php:44 ../olcv_material/index.php:103
 msgid "skillsTitle"
 msgstr ""
 
-#: index.php:44 index.php:122
+#: ../olcv_material/index.php:45 ../olcv_material/index.php:124
 msgid "experienceTitle"
 msgstr ""
 
-#: index.php:45 index.php:259
+#: ../olcv_material/index.php:46 ../olcv_material/index.php:261
 msgid "personalExperienceTitle"
 msgstr ""
 
-#: index.php:46 index.php:285
+#: ../olcv_material/index.php:47 ../olcv_material/index.php:287
 msgid "formationTitle"
 msgstr ""
 
-#: index.php:47 index.php:314
+#: ../olcv_material/index.php:48 ../olcv_material/index.php:316
 msgid "otherTitle"
 msgstr ""
 
-#: index.php:51
+#: ../olcv_material/index.php:52
 msgid "lang"
 msgstr ""
 
-#: index.php:53
+#: ../olcv_material/index.php:54
 msgid "langFr"
 msgstr ""
 
-#: index.php:54
+#: ../olcv_material/index.php:55
 msgid "langEn"
 msgstr ""
 
-#: index.php:58 index.php:66
+#: ../olcv_material/index.php:59 ../olcv_material/index.php:67
 msgid "style"
 msgstr ""
 
-#: index.php:68
+#: ../olcv_material/index.php:69
 msgid "archives"
 msgstr ""
 
-#: index.php:76
+#: ../olcv_material/index.php:77
 msgid "ageLabel"
 msgstr ""
 
-#: index.php:81
+#: ../olcv_material/index.php:82
 msgid "mailLabel"
 msgstr ""
 
-#: index.php:82
+#: ../olcv_material/index.php:83
 msgid "mail"
 msgstr ""
 
-#: index.php:85
+#: ../olcv_material/index.php:86
 msgid "ville"
 msgstr ""
 
-#: index.php:89 index.php:367
+#: ../olcv_material/index.php:90
+msgid "githubIco"
+msgstr ""
+
+#: ../olcv_material/index.php:91 ../olcv_material/index.php:390
 msgid "viadeoIco"
 msgstr ""
 
-#: index.php:90 index.php:368
+#: ../olcv_material/index.php:92 ../olcv_material/index.php:391
 msgid "linkedinIco"
 msgstr ""
 
-#: index.php:91 index.php:370
+#: ../olcv_material/index.php:93 ../olcv_material/index.php:393
 msgid "twitterIco"
 msgstr ""
 
-#: index.php:92 index.php:369
+#: ../olcv_material/index.php:94 ../olcv_material/index.php:392
 msgid "pdfIco"
 msgstr ""
 
-#: index.php:96
+#: ../olcv_material/index.php:98
 msgid "generalDescription"
 msgstr ""
 
-#: index.php:127 index.php:264
+#: ../olcv_material/index.php:129 ../olcv_material/index.php:266
 msgid "month"
 msgstr ""
 
-#: index.php:185
+#: ../olcv_material/index.php:187
 msgid "viewDetail"
 msgstr ""
 
-#: index.php:191
+#: ../olcv_material/index.php:193
 msgid "jobClient"
 msgstr ""
 
-#: index.php:202
+#: ../olcv_material/index.php:204
 msgid "jobEmployer"
 msgstr ""
 
-#: index.php:213
+#: ../olcv_material/index.php:215
 msgid "jobType"
 msgstr ""
 
-#: index.php:219
+#: ../olcv_material/index.php:221
 msgid "jobPlace"
 msgstr ""
 
-#: index.php:225
+#: ../olcv_material/index.php:227
 msgid "jobStatus"
 msgstr ""
 
-#: index.php:288
+#: ../olcv_material/index.php:290
 msgid "formationSubtitle"
 msgstr ""
 
-#: index.php:301
+#: ../olcv_material/index.php:303
 msgid "educationSubtitle"
 msgstr ""
 
-#: index.php:317
+#: ../olcv_material/index.php:319
 msgid "languageSubtitle"
 msgstr ""
 
-#: index.php:334
+#: ../olcv_material/index.php:336
 msgid "toTop"
 msgstr ""
 
-#: index.php:343
+#: ../olcv_material/index.php:345
 msgid "disclaimer"
 msgstr ""
 
-#: index.php:347
+#: ../olcv_material/index.php:349
 msgid "desactivateFilter"
 msgstr ""
 

@@ -87,6 +87,7 @@
                <div id="city"><?php echo $ville; ?></div>
             </div>
             <div class="header_item">
+               <a id="github_ico" class="ico" href="<?php echo $urlGithub; ?>"><img src="img/github.png" title="<?php echo _('githubIco'); ?>" alt="<?php echo _('githubIco'); ?>" /></a>
                <a id="viadeo_ico" class="ico" href="<?php echo $urlViadeo; ?>"><img src="img/viadeo.png" title="<?php echo _('viadeoIco'); ?>" alt="<?php echo _('viadeoIco'); ?>" /></a>
                <a id="linkedin_ico" class="ico" href="<?php echo $urlLinkedIn; ?>"><img src="img/linkedin.png" title="<?php echo _('linkedinIco'); ?>" alt="<?php echo _('linkedinIco'); ?>" /></a>
                <a id="twitter_ico" class="ico" href="<?php echo $urlTwitter; ?>"><img src="img/twitter.png" title="<?php echo _('twitterIco'); ?>" alt="<?php echo _('twitterIco'); ?>" /></a>
